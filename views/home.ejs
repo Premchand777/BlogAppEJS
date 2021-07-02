@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p> <%= mainPageContent %> </p>
+
+   <% blogPosts.forEach(function(blogsArrElement){ %>
+    <h2> <%= blogsArrElement.blogHeading %> </h2>
+    <p> <%= blogsArrElement.blogContent.substring(0, 99) + " ..."; %>
+    <a href="/posts/<%= blogsArrElement.blogHeading %>">Read More</a> </p>
+
+   <% }); %>
+
+<%- include("partials/footer"); -%>
